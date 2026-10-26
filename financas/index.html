@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#12302b">
+  <meta name="description" content="Anote receitas e despesas do mês, veja para onde o dinheiro foi e quanto sobrou.">
+  <title>Caderneta | Receitas e despesas do mês</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" type="image/png" href="icon-192.png">
+  <link rel="apple-touch-icon" href="icon-192.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <section id="login" class="login" hidden>
+    <div class="login-box">
+      <h1 class="logo">Caderneta</h1>
+      <p class="login-text">Anote o que entra e o que sai, e veja quanto sobrou no fim do mês.</p>
+      <div id="google-btn" class="google-btn"></div>
+      <button class="btn" id="demo-btn" type="button">Experimentar sem conta</button>
+      <p class="login-note" id="google-note">O botão do Google aparece quando o ID de cliente é informado em config.js. No modo demonstração, os dados ficam só neste aparelho.</p>
+    </div>
+  </section>
+
+  <div id="app" hidden>
+    <header class="bar">
+      <h1 class="logo">Caderneta</h1>
+      <div class="who">
+        <span id="user-name"></span>
+        <button class="link" id="logout" type="button">Sair</button>
+      </div>
+    </header>
+
+    <main>
+      <nav class="month" aria-label="Escolher mês">
+        <button class="round" id="prev" type="button" aria-label="Mês anterior">&lsaquo;</button>
+        <h2 id="month-title" aria-live="polite"></h2>
+        <button class="round" id="next" type="button" aria-label="Próximo mês">&rsaquo;</button>
+      </nav>
+
+      <section class="summary" aria-label="Resumo do mês">
+        <p class="saldo" id="saldo"></p>
+        <div class="renda" id="renda-bar" role="img" aria-label=""><div class="renda-fill" id="renda-fill"></div></div>
+        <p class="renda-text" id="renda-text"></p>
+        <dl class="pair">
+          <div><dt>Receitas</dt><dd class="in" id="tot-in"></dd></div>
+          <div><dt>Despesas</dt><dd class="out" id="tot-out"></dd></div>
+        </dl>
+        <div class="actions">
+          <button class="btn" id="novo-gasto" type="button">Novo gasto</button>
+          <button class="btn btn-ghost" id="nova-entrada" type="button">Nova entrada</button>
+        </div>
+      </section>
+
+      <div class="charts">
+        <section aria-labelledby="cat-title">
+          <h2 id="cat-title">Para onde foi o dinheiro</h2>
+          <div id="cat-bars"></div>
+        </section>
+        <section aria-labelledby="hist-title">
+          <h2 id="hist-title">Mês a mês</h2>
+          <div id="hist"></div>
+          <p class="legend"><span class="dot in"></span>Receitas <span class="dot out"></span>Despesas</p>
+        </section>
+      </div>
+
+      <section class="list" aria-labelledby="list-title">
+        <div class="list-head">
+          <h2 id="list-title">Lançamentos</h2>
+          <div class="seg" role="group" aria-label="Filtrar lançamentos">
+            <button type="button" data-filter="tudo" aria-pressed="true">Tudo</button>
+            <button type="button" data-filter="gasto" aria-pressed="false">Gastos</button>
+            <button type="button" data-filter="entrada" aria-pressed="false">Entradas</button>
+          </div>
+        </div>
+        <div id="rows" role="list"></div>
+        <div id="empty" class="empty" hidden>
+          <p id="empty-text"></p>
+          <button class="btn btn-ghost" id="sample" type="button">Carregar exemplo</button>
+        </div>
+      </section>
+    </main>
+
+    <p id="toast" class="toast" role="status"></p>
+
+    <footer class="foot">Projeto de demonstração criado pela Nexo Dev. Os dados de exemplo são fictícios.</footer>
+  </div>
+
+  <dialog id="dlg" aria-labelledby="dlg-title">
+    <form id="form" novalidate>
+      <h2 id="dlg-title"></h2>
+      <div class="field">
+        <label for="f-valor">Valor (R$)</label>
+        <input id="f-valor" type="text" inputmode="decimal" autocomplete="off" placeholder="0,00" required>
+      </div>
+      <div class="field">
+        <label for="f-cat">Categoria</label>
+        <select id="f-cat" required></select>
+      </div>
+      <div class="field">
+        <label for="f-data">Data</label>
+        <input id="f-data" type="date" required>
+      </div>
+      <div class="field">
+        <label for="f-desc">Descrição (opcional)</label>
+        <input id="f-desc" type="text" maxlength="60" autocomplete="off">
+      </div>
+      <p id="form-error" class="form-error" role="alert"></p>
+      <div class="dlg-actions">
+        <button class="btn" type="submit">Salvar</button>
+        <button class="btn btn-ghost" type="button" id="cancel">Cancelar</button>
+      </div>
+    </form>
+  </dialog>
+
+  <script src="config.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,202 @@
+{
+  "restaurant": {
+    "name": "Fogão da Lia",
+    "whatsapp": "5511900000000",
+    "instagram": "fogaodalia",
+    "address": "Rua das Palmeiras, 128, Centro, Tiradentes - MG",
+    "hours": [
+      {
+        "days": "Terça a sexta",
+        "time": "11h30 às 15h"
+      },
+      {
+        "days": "Sábado e domingo",
+        "time": "11h às 16h"
+      },
+      {
+        "days": "Segunda",
+        "time": "Fechado"
+      }
+    ]
+  },
+  "categories": [
+    "Entradas",
+    "Pratos principais",
+    "Acompanhamentos",
+    "Sobremesas",
+    "Bebidas"
+  ],
+  "items": [
+    {
+      "id": "i01",
+      "category": "Entradas",
+      "name": "Pão de queijo da casa",
+      "description": "Dez unidades, assadas na hora, com queijo da Serra.",
+      "price": 18,
+      "image": null,
+      "featured": false,
+      "available": true
+    },
+    {
+      "id": "i02",
+      "category": "Entradas",
+      "name": "Torresmo crocante",
+      "description": "Pururuca na ponta do garfo, com limão e pimenta de cheiro.",
+      "price": 28,
+      "image": null,
+      "featured": false,
+      "available": true
+    },
+    {
+      "id": "i03",
+      "category": "Entradas",
+      "name": "Caldo de feijão",
+      "description": "Cozido devagar, com bacon e cebolinha.",
+      "price": 16,
+      "image": null,
+      "featured": false,
+      "available": true
+    },
+    {
+      "id": "i04",
+      "category": "Pratos principais",
+      "name": "Feijão tropeiro",
+      "description": "Com couve, linguiça, ovo e torresmo. Serve bem duas pessoas.",
+      "price": 54,
+      "image": null,
+      "featured": true,
+      "available": true
+    },
+    {
+      "id": "i05",
+      "category": "Pratos principais",
+      "name": "Frango com quiabo",
+      "description": "Frango caipira refogado com quiabo, arroz e angu.",
+      "price": 49,
+      "image": null,
+      "featured": true,
+      "available": true
+    },
+    {
+      "id": "i06",
+      "category": "Pratos principais",
+      "name": "Costelinha com mandioca",
+      "description": "Costelinha de porco assada por 6 horas, com mandioca cozida.",
+      "price": 62,
+      "image": null,
+      "featured": false,
+      "available": true
+    },
+    {
+      "id": "i07",
+      "category": "Pratos principais",
+      "name": "Tutu com lombo e ovo",
+      "description": "Tutu de feijão, lombo grelhado, couve e ovo frito.",
+      "price": 52,
+      "image": null,
+      "featured": true,
+      "available": true
+    },
+    {
+      "id": "i08",
+      "category": "Pratos principais",
+      "name": "Vaca atolada",
+      "description": "Costela bovina com mandioca, em caldo grosso.",
+      "price": 58,
+      "image": null,
+      "featured": false,
+      "available": true
+    },
+    {
+      "id": "i09",
+      "category": "Acompanhamentos",
+      "name": "Couve na chapa",
+      "description": "Rasgada na mão e refogada com alho.",
+      "price": 12,
+      "image": null,
+      "featured": false,
+      "available": true
+    },
+    {
+      "id": "i10",
+      "category": "Acompanhamentos",
+      "name": "Farofa de ovos",
+      "description": "Farinha torrada, ovos e bacon em cubos.",
+      "price": 14,
+      "image": null,
+      "featured": false,
+      "available": true
+    },
+    {
+      "id": "i11",
+      "category": "Acompanhamentos",
+      "name": "Mandioca frita",
+      "description": "Porção para dividir, com molho de pimenta.",
+      "price": 20,
+      "image": null,
+      "featured": false,
+      "available": true
+    },
+    {
+      "id": "i12",
+      "category": "Sobremesas",
+      "name": "Doce de leite com queijo",
+      "description": "Doce de leite de panela com queijo minas fresco.",
+      "price": 19,
+      "image": null,
+      "featured": false,
+      "available": true
+    },
+    {
+      "id": "i13",
+      "category": "Sobremesas",
+      "name": "Goiabada cascão",
+      "description": "Com requeijão cremoso.",
+      "price": 17,
+      "image": null,
+      "featured": false,
+      "available": true
+    },
+    {
+      "id": "i14",
+      "category": "Sobremesas",
+      "name": "Pudim de leite",
+      "description": "Calda de caramelo escura, feito todos os dias.",
+      "price": 16,
+      "image": null,
+      "featured": false,
+      "available": true
+    },
+    {
+      "id": "i15",
+      "category": "Bebidas",
+      "name": "Suco de laranja",
+      "description": "Espremido na hora.",
+      "price": 11,
+      "image": null,
+      "featured": false,
+      "available": true
+    },
+    {
+      "id": "i16",
+      "category": "Bebidas",
+      "name": "Limonada com hortelã",
+      "description": "Jarra para uma pessoa.",
+      "price": 12,
+      "image": null,
+      "featured": false,
+      "available": true
+    },
+    {
+      "id": "i17",
+      "category": "Bebidas",
+      "name": "Café coado",
+      "description": "Passado no coador de pano.",
+      "price": 7,
+      "image": null,
+      "featured": false,
+      "available": true
+    }
+  ],
+  "gallery": []
+}

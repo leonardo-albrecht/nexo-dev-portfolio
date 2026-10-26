@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Fogão da Lia | Cozinha mineira em Tiradentes</title>
+  <meta name="description" content="Cozinha mineira feita no fogão a lenha. Veja o prato do dia, o cardápio completo e reserve sua mesa pelo WhatsApp.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&family=Young+Serif&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip" href="#cardapio">Ir para o cardápio</a>
+
+  <header class="site-header">
+    <a class="brand" href="#top">Fogão da Lia</a>
+    <nav aria-label="Principal">
+      <a href="#cardapio">Cardápio</a>
+      <a href="#historia">A casa</a>
+      <a href="#galeria">Galeria</a>
+      <a href="#contato">Contato</a>
+    </nav>
+    <a class="btn btn-small" data-whatsapp href="#contato">Reservar mesa</a>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-copy">
+        <h1>Comida mineira do jeito que o fogão a lenha faz.</h1>
+        <p>Feijão tropeiro, frango com quiabo e doce de leite com queijo, todo dia, em panela de ferro e fogo baixo.</p>
+        <div class="hero-actions">
+          <a class="btn" href="#cardapio">Ver cardápio</a>
+          <a class="btn btn-ghost" data-whatsapp href="#contato">Reservar pelo WhatsApp</a>
+        </div>
+      </div>
+      <aside class="board" id="board" aria-labelledby="board-title" hidden>
+        <h2 id="board-title">Hoje no fogão</h2>
+        <ul id="today"></ul>
+      </aside>
+    </section>
+
+    <section class="story" id="historia">
+      <div class="story-text">
+        <h2>Uma cozinha de fazenda no meio da cidade</h2>
+        <p>A Lia começou fazendo almoço para os vizinhos, na cozinha da avó, em 1998. As mesas foram crescendo, o fogão a lenha continuou o mesmo.</p>
+        <p>Hoje a receita segue igual: feijão de molho desde a véspera, queijo da Serra, couve rasgada à mão e nada de pressa na panela.</p>
+      </div>
+      <div class="story-art" role="img" aria-label="Toalha xadrez vermelha e branca"></div>
+    </section>
+
+    <section class="menu" id="cardapio" aria-labelledby="menu-title">
+      <h2 id="menu-title">Cardápio</h2>
+      <div class="tabs" id="tabs" role="group" aria-label="Categorias do cardápio"></div>
+      <div class="menu-list" id="menu" aria-live="polite"></div>
+    </section>
+
+    <section class="gallery" id="galeria" aria-labelledby="gallery-title">
+      <h2 id="gallery-title">A casa e a mesa</h2>
+      <div class="gallery-grid" id="gallery"></div>
+    </section>
+
+    <section class="contact" id="contato" aria-labelledby="contact-title">
+      <div class="contact-info">
+        <h2 id="contact-title">Venha almoçar</h2>
+        <p id="address"></p>
+        <dl id="hours"></dl>
+        <p class="contact-links">
+          <a class="btn" data-whatsapp href="#contato">Falar no WhatsApp</a>
+          <a class="btn btn-ghost" id="instagram" href="#contato" target="_blank" rel="noopener">Instagram</a>
+        </p>
+      </div>
+      <iframe class="map" title="Mapa com a localização do Fogão da Lia" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+        src="https://www.google.com/maps?q=Tiradentes%20MG&output=embed"></iframe>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Projeto de demonstração criado pela Nexo Dev. O restaurante, os pratos e os contatos são fictícios.</p>
+    <a href="admin.html">Painel do restaurante</a>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

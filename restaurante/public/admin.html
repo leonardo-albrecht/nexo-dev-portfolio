@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>Painel | Fogão da Lia</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&family=Young+Serif&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="admin-body">
+  <main class="admin-wrap">
+
+    <section id="login-view" class="card login" hidden>
+      <h1>Painel do restaurante</h1>
+      <form id="login-form">
+        <div class="field">
+          <label for="password">Senha</label>
+          <input id="password" type="password" autocomplete="current-password" required>
+        </div>
+        <button class="btn" type="submit">Entrar</button>
+        <p id="login-status" class="status" role="status"></p>
+      </form>
+      <p><a href="index.html">Voltar ao site</a></p>
+    </section>
+
+    <div id="panel-view" hidden>
+      <div class="admin-top">
+        <h1>Painel do restaurante</h1>
+        <div class="row-actions">
+          <a class="btn btn-ghost btn-small" href="index.html" target="_blank" rel="noopener">Ver o site</a>
+          <button class="btn btn-ghost btn-small" id="logout" type="button">Sair</button>
+        </div>
+      </div>
+
+      <h2 id="form-title">Novo item do cardápio</h2>
+      <form id="item-form" class="card">
+        <input type="hidden" id="item-id">
+        <div class="form-grid">
+          <div class="field">
+            <label for="name">Nome do prato</label>
+            <input id="name" type="text" maxlength="80" required>
+          </div>
+          <div class="field">
+            <label for="category">Categoria</label>
+            <select id="category" required></select>
+          </div>
+          <div class="field">
+            <label for="price">Preço (R$)</label>
+            <input id="price" type="number" min="0" max="9999" step="0.01" inputmode="decimal" required>
+          </div>
+          <div class="field">
+            <label for="image">Foto do prato (JPG, PNG ou WebP, até 3 MB)</label>
+            <input id="image" type="file" accept="image/jpeg,image/png,image/webp">
+          </div>
+        </div>
+        <div class="field">
+          <label for="description">Descrição (até 200 caracteres)</label>
+          <textarea id="description" maxlength="200"></textarea>
+        </div>
+        <div class="checks">
+          <label><input id="featured" type="checkbox"> Mostrar em "Hoje no fogão"</label>
+          <label><input id="available" type="checkbox" checked> Disponível no cardápio</label>
+          <label id="remove-image-label" hidden><input id="remove-image" type="checkbox"> Remover a foto atual</label>
+        </div>
+        <div class="row-actions">
+          <button class="btn" type="submit" id="save-item">Salvar item</button>
+          <button class="btn btn-ghost" type="button" id="cancel-edit" hidden>Cancelar edição</button>
+        </div>
+        <p id="item-status" class="status" role="status"></p>
+      </form>
+
+      <h2>Itens do cardápio</h2>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>Prato</th><th>Categoria</th><th>Preço</th><th>Situação</th><th><span class="sr">Ações</span></th></tr>
+          </thead>
+          <tbody id="items"></tbody>
+        </table>
+      </div>
+
+      <h2>Galeria de fotos</h2>
+      <form id="gallery-form" class="card">
+        <div class="form-grid">
+          <div class="field">
+            <label for="photo">Foto (JPG, PNG ou WebP, até 3 MB)</label>
+            <input id="photo" type="file" accept="image/jpeg,image/png,image/webp" required>
+          </div>
+          <div class="field">
+            <label for="caption">Legenda (opcional)</label>
+            <input id="caption" type="text" maxlength="80">
+          </div>
+        </div>
+        <button class="btn" type="submit">Adicionar foto</button>
+        <p id="gallery-status" class="status" role="status"></p>
+      </form>
+      <div id="admin-gallery" class="admin-gallery"></div>
+    </div>
+
+  </main>
+  <script src="admin.js"></script>
+</body>
+</html>

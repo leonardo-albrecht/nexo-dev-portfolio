@@ -1,0 +1,4 @@
+node_modules/
+restaurante/public/uploads/*
+!restaurante/public/uploads/.gitkeep
+.DS_Store

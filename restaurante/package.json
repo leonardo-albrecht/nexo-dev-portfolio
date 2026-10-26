@@ -1,0 +1,17 @@
+{
+  "name": "demo-restaurante-fogao-da-lia",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Demonstração Nexo Dev: site de restaurante com cardápio digital e painel de edição",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "express": "^4.22.3",
+    "multer": "^2.5.0"
+  }
+}

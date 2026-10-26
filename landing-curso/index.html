@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Marmita que Vende | Plano de 21 dias para vender marmitas</title>
+  <meta name="description" content="Curso prático para calcular preço, montar o cardápio e fazer as primeiras vendas de marmita em casa, com planilhas e fichas técnicas prontas.">
+  <meta property="og:title" content="Marmita que Vende">
+  <meta property="og:description" content="Plano de 21 dias para montar e vender suas primeiras marmitas.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip" href="#modulos">Ir para o conteúdo do curso</a>
+
+  <header class="top">
+    <a class="logo" href="#inicio">Marmita que Vende</a>
+    <a class="btn btn-small" data-checkout href="#oferta">Quero entrar</a>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="hero-copy">
+        <h1>Do zero às primeiras marmitas vendidas em 21 dias.</h1>
+        <p>Um plano passo a passo com preço, cardápio e rotina de cozinha prontos, para você começar a vender de casa, sem investir em ponto.</p>
+        <p class="hero-actions">
+          <a class="btn" data-checkout href="#oferta">Quero o plano de 21 dias</a>
+          <a class="btn-link" href="#modulos">Ver o que tem no curso</a>
+        </p>
+      </div>
+
+      <form class="ticket" id="calc" aria-labelledby="calc-title" novalidate>
+        <h2 id="calc-title">Quanto sobra no fim do mês?</h2>
+        <p class="ticket-hint">Mexa nos números da sua cozinha.</p>
+
+        <div class="control">
+          <label for="qtd">Marmitas por dia <output id="qtd-out">20</output></label>
+          <input id="qtd" type="range" min="5" max="60" step="1" value="20">
+        </div>
+        <div class="control">
+          <label for="preco">Preço de venda <output id="preco-out">R$ 22,00</output></label>
+          <input id="preco" type="range" min="12" max="40" step="0.5" value="22">
+        </div>
+        <div class="control">
+          <label for="custo">Custo por marmita, com embalagem <output id="custo-out">R$ 11,00</output></label>
+          <input id="custo" type="range" min="6" max="25" step="0.5" value="11">
+        </div>
+        <div class="control">
+          <label for="dias">Dias de venda no mês <output id="dias-out">22</output></label>
+          <input id="dias" type="range" min="8" max="30" step="1" value="22">
+        </div>
+
+        <dl class="sum" aria-live="polite">
+          <div><dt>Vendas no mês</dt><dd id="r-fat">R$ 0,00</dd></div>
+          <div><dt>Custo das marmitas</dt><dd id="r-custo">R$ 0,00</dd></div>
+          <div class="total"><dt>Sobra no mês</dt><dd id="r-lucro">R$ 0,00</dd></div>
+          <div><dt>Por marmita</dt><dd id="r-unit">R$ 0,00</dd></div>
+        </dl>
+        <p class="ticket-note" id="r-aviso">Simulação com os seus números. Não inclui gás, entrega, impostos nem o seu tempo, e não é promessa de resultado.</p>
+      </form>
+    </section>
+
+    <section class="fit" aria-labelledby="fit-title">
+      <h2 id="fit-title">O curso é para quem quer vender, não para quem quer milagre</h2>
+      <div class="fit-grid">
+        <div>
+          <h3>É para você se</h3>
+          <ul>
+            <li>quer uma renda extra ou uma renda principal cozinhando em casa;</li>
+            <li>tem fogão, geladeira e algumas horas por dia;</li>
+            <li>consegue vender para vizinhos, colegas e grupos de WhatsApp.</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Não é para você se</h3>
+          <ul>
+            <li>espera ficar rico sem cozinhar;</li>
+            <li>quer abrir um restaurante grande agora;</li>
+            <li>não quer anotar custos e fazer conta.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="modules" id="modulos" aria-labelledby="mod-title">
+      <h2 id="mod-title">6 módulos, 32 aulas curtas</h2>
+      <p class="lead">Cada módulo termina com uma tarefa de uma página. Ao fim das 3 semanas, você tem preço, cardápio e rotina definidos.</p>
+      <ol>
+        <li>
+          <h3>Preço que dá lucro</h3>
+          <p>Calcule o custo real de cada marmita e defina o preço de venda sem chutar. Inclui a planilha de preço.</p>
+        </li>
+        <li>
+          <h3>Cardápio enxuto</h3>
+          <p>Cinco pratos-base que giram a semana toda, com ficha técnica de cada um para repetir o sabor sempre.</p>
+        </li>
+        <li>
+          <h3>Cozinha organizada</h3>
+          <p>Rotina de produção para 20 a 40 marmitas por dia, com horário, ordem de preparo e lista de compras.</p>
+        </li>
+        <li>
+          <h3>Embalagem e conservação</h3>
+          <p>Escolha da embalagem, validade, armazenamento e transporte para a marmita chegar boa.</p>
+        </li>
+        <li>
+          <h3>Primeiras vendas</h3>
+          <p>Como apresentar o cardápio no WhatsApp, conseguir os primeiros clientes do bairro e fazer eles voltarem.</p>
+        </li>
+        <li>
+          <h3>Regularização</h3>
+          <p>Passo a passo para abrir o MEI, entender as regras de vigilância sanitária e emitir nota quando precisar.</p>
+        </li>
+      </ol>
+    </section>
+
+    <section class="bonus" aria-labelledby="bonus-title">
+      <h2 id="bonus-title">O que você leva além das aulas</h2>
+      <ul class="kit">
+        <li><strong>Planilha de preço</strong> que calcula custo, margem e preço mínimo.</li>
+        <li><strong>12 fichas técnicas</strong> com ingredientes, rendimento e modo de preparo.</li>
+        <li><strong>Cardápio semanal</strong> pronto para editar e enviar.</li>
+        <li><strong>Mensagens de WhatsApp</strong> para oferecer, confirmar pedido e cobrar.</li>
+        <li><strong>Checklist de regularização</strong> do MEI e da vigilância sanitária.</li>
+      </ul>
+    </section>
+
+    <section class="offer" id="oferta" aria-labelledby="offer-title">
+      <div class="offer-box">
+        <h2 id="offer-title">Marmita que Vende</h2>
+        <p class="price"><span>R$ 197</span> à vista</p>
+        <p class="price-note">Ou em até 12 vezes no cartão, com os juros da operadora. Acesso por 12 meses.</p>
+        <p><a class="btn btn-big" data-checkout href="#oferta">Quero o plano de 21 dias</a></p>
+        <p class="guarantee"><strong>Garantia de 7 dias.</strong> Se o curso não for para você, peça o reembolso total dentro de 7 dias após a compra.</p>
+      </div>
+    </section>
+
+    <section class="faq" aria-labelledby="faq-title">
+      <h2 id="faq-title">Dúvidas comuns</h2>
+      <details>
+        <summary>Preciso saber cozinhar bem?</summary>
+        <p>Você precisa saber fazer arroz, feijão e um prato simples. O curso ensina a organizar a produção e a calcular, não a ser chef.</p>
+      </details>
+      <details>
+        <summary>Quanto preciso investir para começar?</summary>
+        <p>Depende do tamanho que você quer. No módulo 3 há uma lista de compras inicial para 20 marmitas por dia, para você ver o valor antes de gastar.</p>
+      </details>
+      <details>
+        <summary>Por quanto tempo tenho acesso?</summary>
+        <p>Por 12 meses, incluindo as atualizações das planilhas e das fichas técnicas.</p>
+      </details>
+      <details>
+        <summary>Preciso ter MEI para começar?</summary>
+        <p>Você pode começar a testar sem MEI, mas o módulo 6 mostra como se regularizar, o que é necessário para crescer com segurança.</p>
+      </details>
+      <details>
+        <summary>E se eu não gostar?</summary>
+        <p>Você tem 7 dias para pedir o reembolso total, sem perguntas.</p>
+      </details>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <p>Página de demonstração criada pela Nexo Dev. O curso, os preços e as garantias são fictícios.</p>
+  </footer>
+
+  <script src="config.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
